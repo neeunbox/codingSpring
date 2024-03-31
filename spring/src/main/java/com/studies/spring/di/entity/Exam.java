@@ -1,4 +1,4 @@
-package com.studies.spring.di;
+package com.studies.spring.di.entity;
 
 public interface Exam {
     int total();

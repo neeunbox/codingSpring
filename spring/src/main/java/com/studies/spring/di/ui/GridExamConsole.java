@@ -1,6 +1,6 @@
 package com.studies.spring.di.ui;
 
-import com.studies.spring.di.Exam;
+import com.studies.spring.di.entity.Exam;
 
 public class GridExamConsole implements ExamConsole{
 

@@ -1,4 +1,4 @@
-package com.studies.spring.di;
+package com.studies.spring.di.entity;
 
 public class NewlecExam implements Exam {
 
