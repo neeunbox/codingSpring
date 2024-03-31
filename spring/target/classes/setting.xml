@@ -15,10 +15,10 @@
 
     <!-- Exam exam = new NewlecExam(10, 10, 10, 10); -->
     <bean id="exam" class="com.studies.spring.di.entity.NewlecExam">
-        <constructor-arg index="0" value="89" />
-        <constructor-arg index="3" value="100" />
-        <constructor-arg index="2" value="90" />
-        <constructor-arg index="1" value="95" />
+        <constructor-arg name="kor" value="89" />
+        <constructor-arg name="com" value="100" />
+        <constructor-arg name="math" value="90" />
+        <constructor-arg name="eng" value="95" />
     </bean>    
 
     <!-- ExamConsole console = new GridExamConsole(); -->
