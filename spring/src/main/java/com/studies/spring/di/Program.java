@@ -22,21 +22,21 @@ public class Program {
         console.setExam(exam);
          */
 
-         ApplicationContext context = new ClassPathXmlApplicationContext("setting.xml");
+        ApplicationContext context = new ClassPathXmlApplicationContext("setting.xml");
 
-         Exam exam = context.getBean(Exam.class);
-         System.out.println(exam.toString());
+        Exam exam = context.getBean(Exam.class);
+        System.out.println(exam.toString());
 
-        //  ExamConsole console = (ExamConsole) context.getBean("console");
+        // ExamConsole console = (ExamConsole) context.getBean("console");
         ExamConsole console = context.getBean(ExamConsole.class);
-         console.print();
+        console.print();
 
-         List<Exam> exams = new ArrayList<>();
-         exams.add(new NewlecExam(1,1,1,1));
+        List<Exam> exams = (List<Exam>) context.getBean("exams"); 
+        exams.add(new NewlecExam(2,2,2,2));
 
-         for(Exam e : exams) {
+        for(Exam e : exams) {
             System.out.println(e);
-         }
+        }
 
     }
 }

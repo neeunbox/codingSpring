@@ -31,4 +31,7 @@
         <property name="exam" ref="exam" />
     </bean>
 
+    <!-- List<Exam> exams = new ArrayList<>(); -->
+    <bean id="exams" class="java.util.ArrayList"></bean>
+
 </beans>
