@@ -2,7 +2,9 @@
 <beans xmlns="http://www.springframework.org/schema/beans"
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xmlns:p="http://www.springframework.org/schema/p"
-       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/util http://www.springframework.org/schema/util/spring-util.xsd">
 
     <!-- Exam exam = new NewlecExam(); -->
     <!-- <bean id="exam" class="com.studies.spring.di.entity.NewlecExam">
@@ -32,6 +34,19 @@
     </bean>
 
     <!-- List<Exam> exams = new ArrayList<>(); -->
-    <bean id="exams" class="java.util.ArrayList"></bean>
+    <!-- <bean id="exams" class="java.util.ArrayList">
+        <constructor-arg>
+            <list>
+                <bean class="com.studies.spring.di.entity.NewlecExam" p:kor="30" p:eng="30" />
+                <ref bean="exam" />
+            </list>
+        </constructor-arg>
+    </bean> -->
+
+    <util:list id="exams" list-class="java.util.ArrayList">
+        <bean class="com.studies.spring.di.entity.NewlecExam" p:kor="50" p:eng="50" />
+        <ref bean="exam" />
+    </util:list>
+    
 
 </beans>

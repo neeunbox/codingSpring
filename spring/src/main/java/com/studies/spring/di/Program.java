@@ -32,7 +32,7 @@ public class Program {
         console.print();
 
         List<Exam> exams = (List<Exam>) context.getBean("exams"); 
-        exams.add(new NewlecExam(2,2,2,2));
+        //exams.add(new NewlecExam(2,2,2,2));
 
         for(Exam e : exams) {
             System.out.println(e);
