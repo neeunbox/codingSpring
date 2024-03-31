@@ -11,6 +11,7 @@ public class Program {
 
         /* 스프링에게 지시하는 방법으로 코드를 변경
         Exam exam = new NewlecExam();
+        Exam exam = new NewlecExam(10, 10, 10, 10);
         ExamConsole console = new GridExamConsole();
 
         console.setExam(exam);

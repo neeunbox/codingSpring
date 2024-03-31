@@ -4,14 +4,22 @@
        xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- Exam exam = new NewlecExam(); -->
-    <bean id="exam" class="com.studies.spring.di.entity.NewlecExam">
+    <!-- <bean id="exam" class="com.studies.spring.di.entity.NewlecExam">
         <property name="kor">
             <value>90</value>
         </property>
         <property name="eng" value="90" />
         <property name="math" value="90" />
         <property name="com" value="90" />                           
-    </bean>
+    </bean> -->
+
+    <!-- Exam exam = new NewlecExam(10, 10, 10, 10); -->
+    <bean id="exam" class="com.studies.spring.di.entity.NewlecExam">
+        <constructor-arg value="10" />
+        <constructor-arg value="10" />
+        <constructor-arg value="10" />
+        <constructor-arg value="10" />
+    </bean>    
 
     <!-- ExamConsole console = new GridExamConsole(); -->
     <bean id="console" class="com.studies.spring.di.ui.GridExamConsole">
