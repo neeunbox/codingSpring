@@ -3,6 +3,7 @@ package com.studies.spring.di;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import com.studies.spring.di.entity.Exam;
 import com.studies.spring.di.ui.ExamConsole;
 
 public class Program {
@@ -18,6 +19,9 @@ public class Program {
          */
 
          ApplicationContext context = new ClassPathXmlApplicationContext("setting.xml");
+
+         Exam exam = context.getBean(Exam.class);
+         System.out.println(exam.toString());
 
         //  ExamConsole console = (ExamConsole) context.getBean("console");
         ExamConsole console = context.getBean(ExamConsole.class);
