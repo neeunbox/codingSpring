@@ -36,7 +36,8 @@
     -->
 
     <!-- Exam exam = new NewlecExam(10, 10, 10, 10); -->
-    <bean id="exam" class="com.studies.spring.di.entity.NewlecExam" p:kor="10" p:eng="10" />
+    <bean id="exam1" class="com.studies.spring.di.entity.NewlecExam" p:kor="10" p:eng="10" />
+    <bean id="exam2" class="com.studies.spring.di.entity.NewlecExam" p:kor="20" p:eng="20" />
 
     <!-- ExamConsole console = new InlineExamConsole(); -->
     <bean id="console" class="com.studies.spring.di.ui.InlineExamConsole">
@@ -56,9 +57,9 @@
     </bean>
     -->
 
-    <util:list id="exams" list-class="java.util.ArrayList">
+    <!-- <util:list id="exams" list-class="java.util.ArrayList">
         <bean class="com.studies.spring.di.entity.NewlecExam" p:kor="50" p:eng="50" />
         <ref bean="exam" />
-    </util:list>
+    </util:list> -->
 
 </beans>
