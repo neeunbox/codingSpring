@@ -1,20 +1,26 @@
 package com.studies.spring.di;
 
-import com.studies.spring.di.entity.Exam;
-import com.studies.spring.di.entity.NewlecExam;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import com.studies.spring.di.ui.ExamConsole;
-import com.studies.spring.di.ui.GridExamConsole;
 
 public class Program {
 
     public static void main(String[] args) {
         
+
+        /* 스프링에게 지시하는 방법으로 코드를 변경
         Exam exam = new NewlecExam();
         ExamConsole console = new GridExamConsole();
 
         console.setExam(exam);
-        
-        console.print();
+         */
+
+         ApplicationContext context = new ClassPathXmlApplicationContext("setting.xml");
+
+         ExamConsole console = (ExamConsole) context.getBean("console");
+         console.print();
 
     }
 }
