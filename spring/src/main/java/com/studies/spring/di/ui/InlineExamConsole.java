@@ -4,13 +4,19 @@ import com.studies.spring.di.Exam;
 
 public class InlineExamConsole implements ExamConsole {
 
-    
     private Exam exam;
+
+    public InlineExamConsole() {
+    }
 
     public InlineExamConsole(Exam exam) {
         this.exam = exam;
     }
 
+    @Override
+    public void setExam(Exam exam) {
+        this.exam = exam;
+    }
 
     @Override
     public void print() {

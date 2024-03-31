@@ -10,7 +10,8 @@ public class Program {
         
         Exam exam = new NewlecExam();
         // ExamConsole console = new InlineExamConsole(exam);
-        ExamConsole console = new GridExamConsole(exam);
+        ExamConsole console = new GridExamConsole();
+        console.setExam(exam);
         console.print();
 
     }
